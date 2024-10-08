@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "resourcepresets",
+	"version": "${version}",
+	"name": "Resource Presets",
+	"description": "Simple mod allowing you to store and quickly select resource pack presets. Also switching on/off the shaders.",
+	"authors": [
+		"Zeddicus"
+	],
+	"contact": {
+		"homepage": "https://github.com/zeddicus-pl",
+		"sources": "https://github.com/zeddicus-pl/resourcepresets"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/resourcepresets/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.github.zeddicuspl.ResourcePresetsMain"
+		],
+		"client": [
+			"com.github.zeddicuspl.ResourcePresetsPlugin"
+		]
+	},
+	"mixins": [
+		{
+			"config": "resourcepresets.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": ">=1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"iris": "*"
+	}
+}
